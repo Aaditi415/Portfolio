@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-section1 p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333;
+            font-family: 'Readex Pro', sans-serif;
+            margin: 20px 0;
+        }
+        
+        .contact-section1 .left {
+            position: relative;
+            top: 86px;
+            left: 360px;
+            font-size: 20px;
+            font-weight: bold
+        }
+        
+        .contact-section1 .right {
+            position: relative;
+            top: 83px;
+            left: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-section1 .left,
+            .right,
+            .contact_img {
+                display: none;
+            }
+        }
+        
+        .contact_img {
+            position: relative;
+            top: -50px;
+            left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <img src="Image/logo.png" alt="Logo">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a> </li>
+                <li><a href="work.html"> Work</a></li>
+                <li><a href="contact.html"> Contact Us </a> </li>
+            </ul>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+            <button>let’s Connect</button>
+        </nav>
+    </div>
+    <div class="contact-div">
+        <div class="contact-left">
+            <div class="header-container">
+                <div class="line"></div>
+                <div class="header-text">Let’s Get in touch</div>
+            </div>
+            <h2>Let’s Get in <br> touch</h2>
+            <p>
+                Have a question, feedback, or interested in collaborating? We'd love to hear from you!
+            </p>
+            <span>Get in touch -</span>
+            <div class="contact-methods">
+                <button class="contact-button"><img src="image/instagram.png" alt="" srcset=""> Instagram</button>
+                <button class="contact-button"><img src="image/dribbble.png" alt="" srcset="">Dribbble</button>
+                <button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button>
+            </div>
+            <span style="margin-top: 10px;">Resume -</span>
+            <div class="contact-methods">
+                <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
+                <span style="border-right:2px solid grey ; height: 50px;"> </span>
+                <button class="contact-button"><img src="image/download.png" alt="" srcset="">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;"></button>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Name">
+                <div style="display:flex; justify-content: space-between;">
+                    <input type="tel" name="phone" placeholder="Phone" style="width:48%;">
+                    <input type="email" name="email" placeholder="Email" style="width:48%;">
+                </div>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Send a Message</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div style="display: flex; margin: 100px 0;" class="contact-section1">
+        <p class="left">
+            Have more queries? <br> fill the form or pick up
+        </p>
+        <img src="image/Contact us.png" alt="" class="contact_img">
+        <p class="right">Have something to tell us? No matter what the reason is, <br> the phone and call us. we would love to address your <br> queries and collaborate with you.</p>
+    </div>
+    <div class="footer-div">
+        <div class="footer">
+            <img src="image/footer-logo.png" alt="" srcset="" class="first">
+            <ul class="second">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a> </li>
+                <li><a href="work.html"> Work</a></li>
+                <li><a href="contact.html"> Contact Us </a> </li>
+            </ul>
+            <div class="third">
+                <p>
+                    Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
+                </p>
+                <p>Join Our Community
+                    <img src="image/WhatsApp.png" alt="" srcset="">
+                    <img src="image/LinkedIn.png" alt="" srcset="">
+                    <img src="image/behance.png" alt="" srcset="">
+                </p>
+                <span>All Rights Reserved by the user Ui.Guru</span>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

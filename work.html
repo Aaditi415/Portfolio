@@ -3,9 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Work</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        .bredcrumb {
+            text-align: center;
+        }
+        
+        .bredcrumb h1 {
+            font-size: 195px;
+            font-family: "Playfair Display", serif;
+        }
+        
+        .bredcrumb img {
+            position: relative;
+            top: -40px;
+        }
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            position: relative;
+        }
+        
+        .service-card .number {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 124px;
+            color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.2;
+        }
+        
+        .service-card .icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            position: relative;
+            top: 39px;
+            left: 5px;
+        }
+        
+        .service-card span {
+            font-size: 30px;
+            color: #333333;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            top: -10px;
+            left: 80px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            color: #333333;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            text-align: left;
+            min-height: 100px;
+        }
+        
+        .service-card a {
+            text-decoration: none;
+            color: #f76c5e;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .bredcrumb h1 {
+                font-size: 42px;
+                font-family: "Playfair Display", serif;
+            }
+            .bredcrumb img {
+                position: relative;
+                top: -30px;
+                width: 50%;
+            }
+            .service-card {
+                width: 300px;
+            }
+            .services-container {
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -22,74 +128,49 @@
             <button>let’s Connect</button>
         </nav>
     </div>
-    <div class="main">
-        <div class="main-one">
-            <div class="header-container">
-                <div class="line"></div>
-                <div class="header-text">Portfolio</div>
-            </div>
-            <h1>
-                Harshal P. <br> Bhargude
-            </h1>
-            <p>Welcome to 'Designing where innovation knows <br> no bounds. With a passion for pushing the <br> boundaries of UI/UX design.</p>
-            <img src="Image/borderimg.png" alt="">
-            <br>
-            <button>Hire Me</button>
-        </div>
-        <div class="center-img">
-            <img src="Image/main1.png" alt="" srcset="">
-        </div>
-        <div class="main-two">
-            <img src="Image/main.png" alt="" srcset="">
-        </div>
+    <div class="bredcrumb">
+        <h1>Wo<span style="color: #F4B000;">r</span>k</h1>
+        <img src="image/work.png" alt="">
     </div>
-    <div class="bio-div">
-        <div class="bio">
-            <div class="header-container">
-                <div class="line"></div>
-                <div class="header-text">Bio</div>
-            </div>
-            <p> <img src="Image/bio-img.png" alt="" srcset="" class="bio-img"> Hi, I'm Harshal Bhargude, a creative designer with over 3 years of experience in Graphic Design (GFX), now i do specializing in UI/UX design. My journey started with a passion
-                for visual storytelling, leading me to create compelling visual content and branding. As a graphic designer, I worked on diverse projects, developing a strong understanding of visual hierarchy, color theory, and typography. </p>
-            <p>Transitioning into UI/UX, I discovered my calling in designing intuitive, user-centered digital experiences. Currently, I focus on bridging aesthetics and functionality, conducting user research, developing wireframes, and creating prototypes
-                that enhance user satisfaction. Proficient in Figma, Adobe XD, Adobe illustrator and Photoshop, I stay updated with the latest design trends and thrive in collaborative environments.</p>
+    <div class="services-container">
+        <div class="service-card">
+            <div class="number">01</div>
+            <div class="icon"><img src="Image/Mobile.png" alt="Mobile App Icon"></div>
+            <span>Mobile App's</span>
+            <p>Our mobile app design focuses on creating intuitive, user-friendly interfaces that enhance the user experience. By combining clean, modern aesthetics with functional, seamless navigation, we ensure that users can easily access and engage with
+                the app’s features.</p>
+            <a href="#">View</a>
         </div>
-    </div>
-    <div class="skill-div">
-        <div class="skill">
-            <div class="header-container">
-                <div class="line"></div>
-                <div class="header-text">Skills</div>
-            </div>
-            <h2>
-                Exploring My <br> Diverse Skill Set
-            </h2>
-            <div class="icon-grid">
-                <div class="icon-card card1">
-                    <img src="Image/figma.png" alt="Figma Icon">
-                    <p>figma</p>
-                </div>
-                <div class="icon-card card2">
-                    <img src="Image/Xd.png" alt="Xd Icon">
-                    <p>Xd</p>
-                </div>
-                <div class="icon-card card3">
-                    <img src="Image/Photoshop.png" alt="Photoshop Icon">
-                    <p>Photoshop</p>
-                </div>
-                <div class="icon-card card4">
-                    <img src="Image/illustrator.png" alt="Illustrator Icon">
-                    <p>illustrator</p>
-                </div>
-                <div class="icon-card card5">
-                    <img src="Image/Miro.png" alt="Miro Icon">
-                    <p>Miro</p>
-                </div>
-                <div class="icon-card card6">
-                    <img src="Image/ChatGPT.png" alt="Chat GPT Icon">
-                    <p>Chat GPT</p>
-                </div>
-            </div>
+        <div class="service-card">
+            <div class="number">02</div>
+            <div class="icon"><img src="Image/Web.png" alt="Website Icon"></div>
+            <span>Website's</span>
+            <p>A sleek and modern e-commerce website designed to enhance the shopping experience with intuitive navigation, personalized product recommendations, and a seamless checkout process.</p>
+            <a href="#">View</a>
+        </div>
+        <div class="service-card">
+            <div class="number">03</div>
+            <div class="icon"><img src="Image/Internet Connection.png" alt="Web App Icon"></div>
+            <span>Web App's</span>
+            <p>Web app design involves creating user-friendly and aesthetically pleasing interfaces for applications accessed via web browsers. It focuses on functionality, responsiveness, and a seamless user experience, ensuring that web applications are
+                both visually appealing and easy to use across various devices.</p>
+            <a href="#">View</a>
+        </div>
+        <div class="service-card">
+            <div class="number">04</div>
+            <div class="icon"><img src="Image/Design Portal.png" alt="Poster Design Icon"></div>
+            <span>Poster Design</span>
+            <p>Poster design involves crafting visually striking and impactful graphics intended to capture attention and communicate a message effectively. It combines elements of typography, imagery, color, and layout to create compelling promotional materials
+                for events, products, or causes, ensuring the message is clear and memorable at a glance.</p>
+            <a href="#">View</a>
+        </div>
+        <div class="service-card">
+            <div class="number">05</div>
+            <div class="icon"><img src="Image/Design.png" alt="Logo Design Icon"></div>
+            <span>Logo's Design</span>
+            <p>Logo design is the process of creating a unique and recognizable symbol or graphic that represents a brand’s identity. It involves combining elements of typography, color, and imagery to convey the brand’s values, mission, and vision. A well-designed
+                logo provides visual form, serving as a cornerstone of the brand’s overall image and marketing strategy.</p>
+            <a href="#">View</a>
         </div>
     </div>
     <div class="project-div">

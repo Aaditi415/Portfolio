@@ -28,10 +28,11 @@
         padding: 0;
     }
     
-    nav ul li {
+    nav ul li a {
         margin: 0 20px;
         color: #333333;
         font-family: "Readex Pro", sans-serif;
+        text-decoration: none;
     }
     
     nav ul li.active {
@@ -495,6 +496,13 @@
         margin: 0;
     }
     
+    .slider .line {
+        width: auto;
+        height: auto;
+        background-color: #333;
+        margin-right: 10px;
+    }
+    
     .slider h4 {
         font-family: "Playfair Display", serif;
         font-size: 30px;
@@ -758,6 +766,11 @@
         padding: 10px;
     }
     
+    .footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
     .footer span {
         color: rgba(255, 255, 255, 0.5);
     }
@@ -878,6 +891,9 @@
         .main img {
             width: 90%;
             margin: 15px;
+        }
+        .main-one button {
+            display: block;
         }
         .main-one button {
             background-color: #131212;
