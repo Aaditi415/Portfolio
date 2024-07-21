@@ -11,13 +11,14 @@
 <body>
     <div class="nav">
         <nav>
-            <img src="Image/logo.png" alt="" srcset="">
+            <img src="Image/logo.png" alt="Logo">
             <ul>
                 <li class="active">Home</li>
                 <li>About Us</li>
                 <li>Work</li>
                 <li>Contact Us</li>
             </ul>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
             <button>let’s Connect</button>
         </nav>
     </div>
@@ -386,6 +387,12 @@
         </div>
 
     </div>
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        }
+    </script>
 </body>
 
 </html>
