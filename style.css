@@ -921,6 +921,7 @@
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            margin-left: 10px;
         }
         .icon-card {
             width: 150px;
@@ -952,10 +953,13 @@
             width: 370px;
             padding: 20px;
         }
+        .view-project {
+            display: block;
+        }
         /* Project end */
         /* Design div start */
         .design-div {
-            margin: 100px 10px;
+            margin: 100px 10px 50px;
         }
         .design1 h2 {
             font-family: "Playfair Display", serif;
@@ -1091,7 +1095,7 @@
         }
         .slider1,
         .slider2 {
-            padding: 0 2em;
+            padding: 0;
             transform: rotate(-5deg);
             transform-origin: center;
             width: fit-content;
