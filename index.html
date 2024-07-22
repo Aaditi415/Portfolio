@@ -176,35 +176,106 @@
         <div class="image-section">
             <img src="Image/designImg.png" alt="Workspace">
         </div>
-        <div class="text-section">
-            <div class="step">
-                <img src="Image/bullet.png" alt="" srcset="">
-                <span class="text">Research and Discovery</span>
-                <span class="number1">01</span>
-            </div>
-            <div class="step">
-                <img src="Image/bullet.png" alt="" srcset="">
-                <span class="text">Define and Plan</span>
-                <span class="number1">02</span>
-            </div>
-            <div class="step">
-                <img src="Image/bullet.png" alt="" srcset="">
-                <span class="text">Ideation and Concepts</span>
-                <span class="number1">03</span>
-            </div>
-            <div class="step">
-                <img src="Image/bullet.png" alt="" srcset="">
-                <span class="text">Design</span>
-                <span class="number1">04</span>
-            </div>
-            <div class="step">
-                <img src="Image/bullet.png" alt="" srcset="">
-                <span class="text ">Testing</span>
-                <span class="number1 ">05</span>
-            </div>
-            <div class="step" style="border-bottom: none;">
+        <div class="text-section accordion">
 
+
+
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="">
+                    <span class="text">Research and Discovery</span>
+                    <span class="number1">01</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Understand the problem, user needs, and business goals.</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Stakeholder Interviews</li>
+                            <li>Competitive Analysis</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>User Research</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="">
+                    <span class="text">Define and Plan</span>
+                    <span class="number1">02</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Define the project scope, objectives and deliverables</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Personas</li>
+                            <li>information Architecture</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>User Stories</li>
+                            <li>Project Plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="">
+                    <span class="text">Ideation and Concepts </span>
+                    <span class="number1">03</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Genrate the ideas and concept for design</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>brainstorming</li>
+                            <li>wireframes</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>sketching </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="">
+                    <span class="text">Design</span>
+                    <span class="number1">04</span>
+                </div>
+                <div class="accordion-content">
+                    <p>create detailed and high-fidelity designs</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Visual Design</li>
+                            <li>Design System</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="">
+                    <span class="text">Testing</span>
+                    <span class="number1">05</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Test the design with users to identify issues and gather feedback.</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Usability Testing</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>A/B Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div>
@@ -392,6 +463,22 @@
             const navUl = document.querySelector('nav ul');
             navUl.classList.toggle('show');
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('.accordion-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const open = content.style.display === 'block';
+                    document.querySelectorAll('.accordion-content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    if (!open) {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 
