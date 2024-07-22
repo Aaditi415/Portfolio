@@ -182,7 +182,7 @@
 
             <div class="accordion-item">
                 <div class="accordion-header" data-index="1">
-                    <img src="Image/bullet.png" alt="" srcset="">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
                     <span class="text">Research and Discovery</span>
                     <span class="number1">01</span>
                 </div>
@@ -201,7 +201,7 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header" data-index="1">
-                    <img src="Image/bullet.png" alt="" srcset="">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
                     <span class="text">Define and Plan</span>
                     <span class="number1">02</span>
                 </div>
@@ -221,7 +221,7 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header" data-index="1">
-                    <img src="Image/bullet.png" alt="" srcset="">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
                     <span class="text">Ideation and Concepts </span>
                     <span class="number1">03</span>
                 </div>
@@ -240,7 +240,7 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header" data-index="1">
-                    <img src="Image/bullet.png" alt="" srcset="">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
                     <span class="text">Design</span>
                     <span class="number1">04</span>
                 </div>
@@ -259,7 +259,7 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header" data-index="1">
-                    <img src="Image/bullet.png" alt="" srcset="">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
                     <span class="text">Testing</span>
                     <span class="number1">05</span>
                 </div>
@@ -469,12 +469,18 @@
             headers.forEach(header => {
                 header.addEventListener('click', () => {
                     const content = header.nextElementSibling;
+                    const image = header.querySelector('.accordion-img');
                     const open = content.style.display === 'block';
                     document.querySelectorAll('.accordion-content').forEach(content => {
                         content.style.display = 'none';
+
+                    });
+                    document.querySelectorAll('.accordion-img').forEach(img => {
+                        img.classList.remove('rotate-90');
                     });
                     if (!open) {
                         content.style.display = 'block';
+                        image.classList.add('rotate-90');
                     }
                 });
             });

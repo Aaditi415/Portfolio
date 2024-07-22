@@ -23,6 +23,35 @@
             top: -40px;
         }
         
+        .main-two1 {
+            margin-left: 100px;
+            margin-right: 0px;
+        }
+        
+        .main-two1 img {
+            position: relative;
+            left: 0px;
+        }
+        
+        .main-one1 {
+            margin-right: 100px;
+            margin-left: 10px;
+            text-align: center;
+        }
+        
+        .main-one h1 {
+            color: #FFC043;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 210px;
+            font-weight: bold;
+        }
+        
+        .main-one p {
+            font-size: 28px;
+            font-weight: 500;
+            width: 80%;
+        }
+        
         .services-container {
             display: flex;
             flex-wrap: wrap;
@@ -87,6 +116,20 @@
             text-align: left;
         }
         
+        .two {
+            margin-left: 200px;
+        }
+        
+        .one {
+            margin-right: 100px;
+        }
+        
+        .one p {
+            font-size: 24px;
+            width: 70%;
+            margin-left: 166px;
+        }
+        
         @media (max-width: 768px) {
             .services-container {
                 flex-direction: column;
@@ -104,11 +147,36 @@
                 top: -30px;
                 width: 50%;
             }
+            .main-two1 {
+                margin-left: 10px;
+                margin-right: 0px;
+            }
+            .main-two1 img {
+                position: relative;
+                left: 0;
+            }
+            .main-one1 {
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            .main-one h1 {
+                font-size: 48px;
+            }
+            .main-one p {
+                font-size: 18px;
+            }
             .service-card {
                 width: 300px;
             }
             .services-container {
                 padding: 0;
+            }
+            .one p {
+                margin-left: 0;
+                width: 100%;
+            }
+            .one {
+                text-align: center;
             }
         }
     </style>
@@ -119,9 +187,9 @@
         <nav>
             <img src="Image/logo.png" alt="Logo">
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a> </li>
-                <li><a href="work.html"> Work</a></li>
+                <li class="active"><a href="work.html"> Work</a></li>
                 <li><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
@@ -173,6 +241,64 @@
             <a href="#">View</a>
         </div>
     </div>
+
+
+    <div class="main">
+        <div class="main-two main-two1">
+            <img src="Image/w1.png" alt="" srcset="">
+        </div>
+        <div class="main-one main-one1">
+            <div class="header-container">
+                <div class="line"></div>
+                <div class="header-text">Mobile App Design</div>
+            </div>
+            <div class="main-two main-two1">
+                <img src="Image/w2.png" alt="" srcset="">
+            </div>
+            <p>“DEEP THINKER WITH A QUICK MIND”</p>
+            <button>Hire Me</button>
+        </div>
+
+
+    </div>
+
+    <div class="main" style="background-image: url(image/Ellipse.png);background-position: center;
+    background-repeat: no-repeat;">
+        <div class="main-one">
+            <div class="header-container">
+                <div class="line"></div>
+                <div class="header-text">Logo Design</div>
+            </div>
+            <h1>
+                Logo
+            </h1>
+            <p>The logo for the online learning platform mobile app features a sleek, modern design that embodies the essence of education and innovation. It showcases an open book with a digital twist, where the pages are slightly pixelated to represent
+                the fusion of traditional learning and modern technology. The color scheme combines calming blue tones to symbolize trust and reliability with a hint of vibrant green to reflect growth and knowledge. The overall design is minimalist yet
+                impactful, making it easily recognizable and memorable for users.</p>
+
+        </div>
+        <div class="main-two">
+            <img src="Image/screen1.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-two main-two1 two">
+            <img src="Image/screen3.png" alt="" srcset="">
+        </div>
+        <div class="main-one main-one1 one">
+            <img src="image/w-logo.png" alt="" srcset="">
+
+            <p>Our online learning platform mobile app provides seamless access to high-quality educational content anytime, anywhere. With personalized learning paths, interactive multimedia courses, community forums, and real-time progress tracking, it’s
+                designed to enhance your learning experience. Earn recognized certificates and advance your career with our user-friendly, engaging, and accessible app. Start your journey to knowledge today!</p>
+
+            <button>View Project</button>
+
+        </div>
+
+
+    </div>
+
     <div class="project-div">
         <div class="project1">
             <div class="header-container">
