@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        
+        .testimonials-section {
+            text-align: center;
+            margin: 100px 0;
+            padding: 50px 20px;
+            background-image: url('image/bg_review.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .testimonials-section h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 56px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .testimonials-section p {
+            font-family: "Playfair Display", serif;
+            color: #fff;
+            font-size: 24px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .testimonial {
+            border-radius: 10px;
+            margin: 0 20px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            opacity: 0.5;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            flex-shrink: 0;
+            color: #fff;
+        }
+        
+        .testimonial.main {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        
+        .testimonial-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .testimonial h3 {
+            font-size: 28px;
+            font-family: "Readex Pro", sans-serif;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial .myspan {
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .testimonial p {
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial .rev_img {
+            position: relative;
+            top: 50px;
+            left: -250px;
+        }
+        
+        .left,
+        .right {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate {
+            animation: fadeIn 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testimonials-section">
+        <h2>Testimonials</h2>
+        <p>What Our Clients Say</p>
+        <div class="testimonials-container">
+            <div class="testimonial" id="testimonial1">
+                <div class="testimonial-image">
+                    <img src="image/r1.png" alt="Om Jadhav">
+                </div>
+                <h3>Om Jadhav</h3>
+                <span class="myspan">Satara, Shirwal 412803</span>
+                <p>"Great service and attention to detail."</p>
+            </div>
+            <img src="image/left.png" alt="Left" class="left" id="leftBtn">
+            <div class="testimonial main" id="testimonial2">
+                <div class="testimonial-image">
+                    <img src="image/r2.png" alt="Aniket Jadhav">
+                </div>
+                <h3>Aniket Jadhav</h3>
+                <span class="myspan">Katraj, Pune 412502</span>
+                <p>"Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."</p>
+            </div>
+            <img src="image/right.png" alt="Right" class="right" id="rightBtn">
+            <div class="testimonial" id="testimonial3">
+                <div class="testimonial-image">
+                    <img src="image/r3.png" alt="Rohit Jadhav">
+                </div>
+                <h3>Rohit Jadhav</h3>
+                <span class="myspan">Pune 412502</span>
+                <p>"Excellent experience from start to finish."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+
+            let currentMainIndex = 1; // The index of the current main testimonial
+
+            leftBtn.addEventListener('click', function() {
+                rotateLeft();
+            });
+
+            rightBtn.addEventListener('click', function() {
+                rotateRight();
+            });
+
+            function rotateLeft() {
+                testimonials[currentMainIndex].classList.remove('main');
+                testimonials[currentMainIndex].classList.add('animate');
+
+                currentMainIndex = (currentMainIndex - 1 + testimonials.length) % testimonials.length;
+
+                testimonials[currentMainIndex].classList.add('main');
+                testimonials[currentMainIndex].classList.add('animate');
+
+                setTimeout(() => {
+                    testimonials.forEach(testimonial => testimonial.classList.remove('animate'));
+                }, 500);
+            }
+
+            function rotateRight() {
+                testimonials[currentMainIndex].classList.remove('main');
+                testimonials[currentMainIndex].classList.add('animate');
+
+                currentMainIndex = (currentMainIndex + 1) % testimonials.length;
+
+                testimonials[currentMainIndex].classList.add('main');
+                testimonials[currentMainIndex].classList.add('animate');
+
+                setTimeout(() => {
+                    testimonials.forEach(testimonial => testimonial.classList.remove('animate'));
+                }, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>
