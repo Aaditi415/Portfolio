@@ -30,6 +30,7 @@
         
         .main-two1 img {
             position: relative;
+            top: 120px;
             left: 0px;
         }
         
@@ -130,10 +131,19 @@
             margin-left: 95px;
         }
         
+        .left-m {
+            position: relative;
+            left: 100px;
+        }
+        
         @media (max-width: 768px) {
             .services-container {
                 flex-direction: column;
                 align-items: center;
+            }
+            .left-m {
+                position: relative;
+                left: 0px;
             }
         }
         
@@ -188,7 +198,7 @@
 <body>
     <div class="nav">
         <nav>
-            <img src="Image/logo.png" alt="Logo">
+            <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a> </li>
@@ -196,7 +206,7 @@
                 <li><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button>let’s Connect</button>
+            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Let’s Connect</a> </button>
         </nav>
     </div>
     <div class="bredcrumb">
@@ -248,7 +258,7 @@
 
     <div class="main">
         <div class="main-two main-two1">
-            <img src="Image/w1.png" alt="" srcset="">
+            <img src="Image/w1.png" alt="" srcset="" style="top: 0">
         </div>
         <div class="main-one main-one1">
             <div class="header-container">
@@ -256,9 +266,9 @@
                 <div class="header-text">Mobile App Design</div>
             </div>
             <div class="main-two main-two1">
-                <img src="Image/w2.png" alt="" srcset="">
+                <img src="Image/w2.png" alt="" srcset="" style="top: 0">
             </div>
-            <p>“DEEP THINKER WITH A QUICK MIND”</p>
+            <p class="left-m">“DEEP THINKER WITH A QUICK MIND”</p>
             <button>Hire Me</button>
         </div>
 
@@ -293,7 +303,7 @@
             <div class="main-two main-two1 two">
                 <img src="Image/screen5.png" alt="" srcset="">
             </div>
-            <div class="" style="display: flex;position: relative; top: 261px;">
+            <div class="" style="display: flex;position: relative; top: 350px;">
 
                 <img src="image/Intro Screen.png" alt="" srcset="" style="position: relative; top: 125px; left: -650px;">
                 <img src="image/screen2.png " alt=" " srcset=" " style="width: 316px;height:642px;position: relative; left: -100px; ">
@@ -305,15 +315,15 @@
 
 
         </div>
-        <div class="main ">
-            <div class="main-two main-two1 two " style="position: relative; top: -101px; ">
+        <div class="main " style="margin-top: 100px;">
+            <div class="main-two main-two1 two " style="position: relative; top: -120px; ">
                 <img src="Image/screen4.png " alt=" " srcset=" ">
             </div>
             <div class="main-one main-one1 one ">
                 <img src="image/w-logo.png " alt=" " srcset=" " style="position: relative;
-            left: 26px;">
+            left: 26px;top: 40px;">
 
-                <p>Our online learning platform mobile app provides seamless access to high-quality educational content anytime, anywhere. With personalized learning paths, interactive multimedia courses, community forums, and real-time progress tracking,
+                <p style="margin-top: px;">Our online learning platform mobile app provides seamless access to high-quality educational content anytime, anywhere. With personalized learning paths, interactive multimedia courses, community forums, and real-time progress tracking,
                     it’s designed to enhance your learning experience. Earn recognized certificates and advance your career with our user-friendly, engaging, and accessible app. Start your journey to knowledge today!</p>
 
                 <button>View Project</button>
@@ -404,42 +414,114 @@
         </div>
 
     </div>
-    <div class="container ">
-        <div class="image-section ">
-            <img src="Image/designImg.png " alt="Workspace ">
-        </div>
-        <div class="text-section ">
-            <div class="step ">
-                <img src="Image/bullet.png " alt=" " srcset=" ">
-                <span class="text ">Research and Discovery</span>
-                <span class="number1 ">01</span>
-            </div>
-            <div class="step ">
-                <img src="Image/bullet.png " alt=" " srcset=" ">
-                <span class="text ">Define and Plan</span>
-                <span class="number1 ">02</span>
-            </div>
-            <div class="step ">
-                <img src="Image/bullet.png " alt=" " srcset=" ">
-                <span class="text ">Ideation and Concepts</span>
-                <span class="number1 ">03</span>
-            </div>
-            <div class="step ">
-                <img src="Image/bullet.png " alt=" " srcset=" ">
-                <span class="text ">Design</span>
-                <span class="number1 ">04</span>
-            </div>
-            <div class="step ">
-                <img src="Image/bullet.png " alt=" " srcset=" ">
-                <span class="text ">Testing</span>
-                <span class="number1 ">05</span>
-            </div>
-            <div class="step " style="border-bottom: none; ">
 
+    <div class="container">
+        <div class="image-section">
+            <img src="Image/designImg.png" alt="Workspace">
+        </div>
+        <div class="text-section accordion">
+
+
+
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
+                    <span class="text">Research and Discovery</span>
+                    <span class="number1">01</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Understand the problem, user needs, and business goals.</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Stakeholder Interviews</li>
+                            <li>Competitive Analysis</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>User Research</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
+                    <span class="text">Define and Plan</span>
+                    <span class="number1">02</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Define the project scope, objectives and deliverables</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Personas</li>
+                            <li>information Architecture</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>User Stories</li>
+                            <li>Project Plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
+                    <span class="text">Ideation and Concepts </span>
+                    <span class="number1">03</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Genrate the ideas and concept for design</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>brainstorming</li>
+                            <li>wireframes</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>sketching </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
+                    <span class="text">Design</span>
+                    <span class="number1">04</span>
+                </div>
+                <div class="accordion-content">
+                    <p>create detailed and high-fidelity designs</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Visual Design</li>
+                            <li>Design System</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" data-index="1">
+                    <img src="Image/bullet.png" alt="" srcset="" class="accordion-img">
+                    <span class="text">Testing</span>
+                    <span class="number1">05</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Test the design with users to identify issues and gather feedback.</p>
+                    <div style="display: flex;padding-left: 20px; ">
+                        <ul style="list-style-type: circle;">
+                            <li>Usability Testing</li>
+                        </ul>
+                        <ul style="list-style-type: circle;margin-left: 50px;">
+                            <li>A/B Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div>
+    <div style="background-image: url('Image/Slider/Ellipse.png');background-position: center">
         <div class="slider-div ">
             <div class="slider ">
                 <h2>
@@ -523,40 +605,40 @@
         </div>
 
     </div>
-    <div class="testimonials-section ">
+    <div class="testimonials-section">
         <h2>Testimonials</h2>
         <p>What Our Client Says</p>
-        <div class="testimonials-container ">
-            <div class="testimonial ">
-                <div class="testimonial-image ">
-                    <img src="Image/r1.png " alt="Rohit Jadhav ">
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="Image/r1.png" alt="Rohit Jadhav" id="image1">
                 </div>
-                <h3>Om Jadhav</h3>
-                <span class="myspan ">Satara, Shirwal 412803</span>
+                <h3 id="name1">Om Jadhav</h3>
+                <span class="myspan" id="address1">Satara, Shirwal 412803</span>
             </div>
-            <img src="image/left.png " alt=" " srcset=" " style="height: 400px; " class="left ">
-            <div class="testimonial onlyme ">
-                <div class="testimonial-image ">
-                    <img src="Image/r2.png " alt="Harshu Jadhav ">
+            <img src="image/left.png" alt="" srcset="" style="height: 400px;" class="left" onclick="previousTestimonial()">
+            <div class="testimonial onlyme">
+                <div class="testimonial-image">
+                    <img src="Image/r2.png" alt="Harshu Jadhav" id="image">
                 </div>
 
-                <h3>Aniket Jadhav</h3>
-                <span class="myspan ">Katraj, Pune 412502</span>
+                <h3 id="name" style="margin-bottom:5px">Aniket Jadhav</h3>
+                <span class="myspan" id="address" style="margin-left: 50px;">Katraj, Pune 412502</span>
 
-                <img src="image/review.png " alt=" " srcset=" " class="rev_img ">
-                <p>
-                    "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs. "
+                <img src="image/review.png" alt="" srcset="" class="rev_img">
+                <p id="text">
+                    "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."
                 </p>
             </div>
-            <img src="image/right.png " alt=" " srcset=" " style="height: 400px; " class="right ">
+            <img src="image/right.png" alt="" srcset="" style="height: 400px;" class="right" onclick="nextTestimonial()">
 
-            <div class="testimonial ">
-                <div class="testimonial-image ">
-                    <img src="Image/r3.png " alt="Aniket Jadhav ">
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="Image/r3.png" alt="Aniket Jadhav" id="image2">
                 </div>
-                <h3>Rohit Jadhav</h3>
+                <h3 id="name2">Rohit Jadhav</h3>
 
-                <span class="myspan "> Pune 412502</span>
+                <span class="myspan" id="address2"> Pune 412502</span>
             </div>
         </div>
     </div>
@@ -572,16 +654,17 @@
             </p>
             <span>Get in touch -</span>
             <div class="contact-methods ">
-                <button class="contact-button "><img src="image/instagram.png " alt=" " srcset=" "> Instagram</button>
-                <button class="contact-button "><img src="image/dribbble.png " alt=" " srcset=" ">Dribbble</button>
-                <button class="contact-button "><img src="image/behance-02.png " alt=" " srcset=" ">Behance</button>
+
+                <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi" style="text-decoration: none;"><button class="contact-button"><img src="image/whatsapp1.png" alt="" srcset=""> WhatsApp</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/LinkedIn1.png" alt="" srcset="">LinkedIn</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button></a>
             </div>
             <span style="margin-top: 10px; ">Resume -</span>
             <div class="contact-methods ">
-                <button class="contact-button "><img src="image/resume.png " alt=" " srcset=" "> Harshal Bhargude Resume</button>
-                <span style="border-right:2px solid grey ; height: 50px; "> </span>
-                <button class="contact-button "><img src="image/download.png " alt=" " srcset=" ">| <img src="image/eye.png " alt=" " srcset=" "  style="margin-left: 10px;padding-top: 3px; "></button>
-            </div>
+
+                <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
+                <span style="border-right:2px solid grey ; height: 50px;"> </span>
+                <button class="contact-button"><img src="image/download.png" alt="" srcset="" id="downloadPdf">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;" id="viewPdf"></button> </div>
         </div>
 
         <div class="contact-right ">
@@ -610,9 +693,9 @@
                     Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
                 </p>
                 <p>Join Our Community
-                    <img src="image/WhatsApp.png " alt=" " srcset=" ">
-                    <img src="image/LinkedIn.png " alt=" " srcset=" ">
-                    <img src="image/behance.png " alt=" " srcset=" ">
+                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
                 </p>
                 <span>All Rights Reserved by the user Ui.Guru</span>
             </div>
@@ -624,6 +707,83 @@
             const navUl = document.querySelector('nav ul');
             navUl.classList.toggle('show');
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('.accordion-header');
+
+            headers.forEach(header => {
+                header.addEventListener('mouseover', () => {
+                    const content = header.nextElementSibling;
+                    const image = header.querySelector('.accordion-img');
+                    const open = content.style.display === 'block';
+                    document.querySelectorAll('.accordion-content').forEach(content => {
+                        content.style.display = 'none';
+
+                    });
+                    document.querySelectorAll('.accordion-img').forEach(img => {
+                        img.classList.remove('rotate-90');
+                    });
+                    if (!open) {
+                        content.style.display = 'block';
+                        image.classList.add('rotate-90');
+                    }
+                });
+            });
+        });
+
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            window.location.href = 'image/Harshal Pandurang Bhargude (UI UX Resume)..pdf';
+        });
+
+        document.getElementById('viewPdf').addEventListener('click', function() {
+            window.open('image/Harshal Pandurang Bhargude (UI UX Resume)..pdf', '_blank');
+        });
+        let currentIndex = 0;
+
+        const testimonials = [{
+            image: "Image/slider/r1.png",
+            name: "Om Jadhav",
+            address: "Satara, Shirwal 412803",
+            text: "The user experience overhaul by Harshal Bhargude has been game-changer for our platform. They understood our needs and delivered a product that exceeded our expectation. Their experties in UI/UX design is evident in every detail. Highly recommanded!"
+        }, {
+            image: "Image/r2.png",
+            name: "Aniket Jadhav",
+            address: "Katraj, Pune 412502",
+            text: "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."
+        }, {
+            image: "Image/slider/r3.png",
+            name: "Rohit Jadhav",
+            address: "Pune 412502",
+            text: "We were blown away by Harshal Bhargude creativity and professionalism. the new design has significantly improve user engagement and satisfiction. Their innovative soultions and collaborative approach made the entire process seamless."
+        }];
+
+        function updateTestimonials(index) {
+            document.getElementById("image1").src = testimonials[(index + 2) % 3].image;
+            document.getElementById("name1").textContent = testimonials[(index + 2) % 3].name;
+            document.getElementById("address1").textContent = testimonials[(index + 2) % 3].address;
+
+            document.getElementById("image").src = testimonials[index].image;
+            document.getElementById("name").textContent = testimonials[index].name;
+            document.getElementById("address").textContent = testimonials[index].address;
+            document.getElementById("text").textContent = testimonials[index].text;
+
+            document.getElementById("image2").src = testimonials[(index + 1) % 3].image;
+            document.getElementById("name2").textContent = testimonials[(index + 1) % 3].name;
+            document.getElementById("address2").textContent = testimonials[(index + 1) % 3].address;
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonials(currentIndex);
+        }
+
+        function previousTestimonial() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonials(currentIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            updateTestimonials(currentIndex);
+        });
     </script>
 </body>
 

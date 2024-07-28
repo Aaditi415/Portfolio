@@ -11,7 +11,7 @@
 <body>
     <div class="nav">
         <nav>
-            <img src="Image/logo.png" alt="Logo">
+            <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a> </li>
@@ -19,7 +19,7 @@
                 <li><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button>let’s Connect</button>
+            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Let’s Connect</a> </button>
         </nav>
     </div>
     <div class="main">
@@ -32,12 +32,18 @@
                 Harshal P. <br> Bhargude
             </h1>
             <p>Welcome to 'Designing where innovation knows <br> no bounds. With a passion for pushing the <br> boundaries of UI/UX design.</p>
-            <img src="Image/borderimg.png" alt="">
+            <img src="Image/borderimg.png" alt="" class="display-img" style="display: none;">
+
+            <div class="typing-container">
+                <p class="typing-text">GFX & UI-UX Designer</p>
+                <img src="Image/Slider/border.png" alt="">
+            </div>
             <br>
             <button>Hire Me</button>
         </div>
         <div class="center-img">
-            <img src="Image/main1.png" alt="" srcset="">
+            <img src="Image/Slider/Circle.png" alt="" srcset="" class="c-img1">
+            <img src="image/Slider/circle1.png" alt="" srcset="" class="c-img2">
         </div>
         <div class="main-two">
             <img src="Image/main.png" alt="" srcset="">
@@ -278,7 +284,7 @@
 
         </div>
     </div>
-    <div>
+    <div style="background-image: url('Image/Slider/Ellipse.png');background-position: center">
         <div class="slider-div">
             <div class="slider">
                 <h2>
@@ -368,34 +374,34 @@
         <div class="testimonials-container">
             <div class="testimonial">
                 <div class="testimonial-image">
-                    <img src="Image/r1.png" alt="Rohit Jadhav">
+                    <img src="Image/r1.png" alt="Rohit Jadhav" id="image1">
                 </div>
-                <h3>Om Jadhav</h3>
-                <span class="myspan">Satara, Shirwal 412803</span>
+                <h3 id="name1">Om Jadhav</h3>
+                <span class="myspan" id="address1">Satara, Shirwal 412803</span>
             </div>
-            <img src="image/left.png" alt="" srcset="" style="height: 400px;" class="left">
+            <img src="image/left.png" alt="" srcset="" style="height: 400px;" class="left" onclick="previousTestimonial()">
             <div class="testimonial onlyme">
                 <div class="testimonial-image">
-                    <img src="Image/r2.png" alt="Harshu Jadhav">
+                    <img src="Image/r2.png" alt="Harshu Jadhav" id="image">
                 </div>
 
-                <h3>Aniket Jadhav</h3>
-                <span class="myspan">Katraj, Pune 412502</span>
+                <h3 id="name" style="margin-bottom:5px">Aniket Jadhav</h3>
+                <span class="myspan" id="address" style="margin-left: 50px;">Katraj, Pune 412502</span>
 
                 <img src="image/review.png" alt="" srcset="" class="rev_img">
-                <p>
+                <p id="text">
                     "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."
                 </p>
             </div>
-            <img src="image/right.png" alt="" srcset="" style="height: 400px;" class="right">
+            <img src="image/right.png" alt="" srcset="" style="height: 400px;" class="right" onclick="nextTestimonial()">
 
             <div class="testimonial">
                 <div class="testimonial-image">
-                    <img src="Image/r3.png" alt="Aniket Jadhav">
+                    <img src="Image/r3.png" alt="Aniket Jadhav" id="image2">
                 </div>
-                <h3>Rohit Jadhav</h3>
+                <h3 id="name2">Rohit Jadhav</h3>
 
-                <span class="myspan"> Pune 412502</span>
+                <span class="myspan" id="address2"> Pune 412502</span>
             </div>
         </div>
     </div>
@@ -411,15 +417,15 @@
             </p>
             <span>Get in touch -</span>
             <div class="contact-methods">
-                <button class="contact-button"><img src="image/instagram.png" alt="" srcset=""> Instagram</button>
-                <button class="contact-button"><img src="image/dribbble.png" alt="" srcset="">Dribbble</button>
-                <button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button>
+                <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi" style="text-decoration: none;"><button class="contact-button"><img src="image/whatsapp1.png" alt="" srcset=""> WhatsApp</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/LinkedIn1.png" alt="" srcset="">LinkedIn</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button></a>
             </div>
             <span style="margin-top: 10px;">Resume -</span>
             <div class="contact-methods">
                 <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
                 <span style="border-right:2px solid grey ; height: 50px;"> </span>
-                <button class="contact-button"><img src="image/download.png" alt="" srcset="">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;"></button>
+                <button class="contact-button"><img src="image/download.png" alt="" srcset="" id="downloadPdf">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;" id="viewPdf"></button>
             </div>
         </div>
 
@@ -449,9 +455,9 @@
                     Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
                 </p>
                 <p>Join Our Community
-                    <img src="image/WhatsApp.png" alt="" srcset="">
-                    <img src="image/LinkedIn.png" alt="" srcset="">
-                    <img src="image/behance.png" alt="" srcset="">
+                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
                 </p>
                 <span>All Rights Reserved by the user Ui.Guru</span>
             </div>
@@ -467,7 +473,7 @@
             const headers = document.querySelectorAll('.accordion-header');
 
             headers.forEach(header => {
-                header.addEventListener('click', () => {
+                header.addEventListener('mouseover', () => {
                     const content = header.nextElementSibling;
                     const image = header.querySelector('.accordion-img');
                     const open = content.style.display === 'block';
@@ -484,6 +490,61 @@
                     }
                 });
             });
+        });
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            window.location.href = 'image/Harshal Pandurang Bhargude (UI UX Resume)..pdf';
+        });
+
+        document.getElementById('viewPdf').addEventListener('click', function() {
+            window.open('image/Harshal Pandurang Bhargude (UI UX Resume)..pdf', '_blank');
+        });
+
+        let currentIndex = 0;
+
+        const testimonials = [{
+            image: "Image/slider/r1.png",
+            name: "Om Jadhav",
+            address: "Satara, Shirwal 412803",
+            text: "The user experience overhaul by Harshal Bhargude has been game-changer for our platform. They understood our needs and delivered a product that exceeded our expectation. Their experties in UI/UX design is evident in every detail. Highly recommanded!"
+        }, {
+            image: "Image/r2.png",
+            name: "Aniket Jadhav",
+            address: "Katraj, Pune 412502",
+            text: "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."
+        }, {
+            image: "Image/slider/r3.png",
+            name: "Rohit Jadhav",
+            address: "Pune 412502",
+            text: "We were blown away by Harshal Bhargude creativity and professionalism. the new design has significantly improve user engagement and satisfiction. Their innovative soultions and collaborative approach made the entire process seamless."
+        }];
+
+        function updateTestimonials(index) {
+            document.getElementById("image1").src = testimonials[(index + 2) % 3].image;
+            document.getElementById("name1").textContent = testimonials[(index + 2) % 3].name;
+            document.getElementById("address1").textContent = testimonials[(index + 2) % 3].address;
+
+            document.getElementById("image").src = testimonials[index].image;
+            document.getElementById("name").textContent = testimonials[index].name;
+            document.getElementById("address").textContent = testimonials[index].address;
+            document.getElementById("text").textContent = testimonials[index].text;
+
+            document.getElementById("image2").src = testimonials[(index + 1) % 3].image;
+            document.getElementById("name2").textContent = testimonials[(index + 1) % 3].name;
+            document.getElementById("address2").textContent = testimonials[(index + 1) % 3].address;
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonials(currentIndex);
+        }
+
+        function previousTestimonial() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonials(currentIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            updateTestimonials(currentIndex);
         });
     </script>
 </body>

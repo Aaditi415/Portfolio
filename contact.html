@@ -51,7 +51,7 @@
 <body>
     <div class="nav">
         <nav>
-            <img src="Image/logo.png" alt="Logo">
+            <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a> </li>
@@ -59,7 +59,7 @@
                 <li class="active"><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button>let’s Connect</button>
+            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Let’s Connect</a> </button>
         </nav>
     </div>
     <div class="contact-div">
@@ -74,16 +74,17 @@
             </p>
             <span>Get in touch -</span>
             <div class="contact-methods">
-                <button class="contact-button"><img src="image/instagram.png" alt="" srcset=""> Instagram</button>
-                <button class="contact-button"><img src="image/dribbble.png" alt="" srcset="">Dribbble</button>
-                <button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button>
+
+                <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi" style="text-decoration: none;"><button class="contact-button"><img src="image/whatsapp1.png" alt="" srcset=""> WhatsApp</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/LinkedIn1.png" alt="" srcset="">LinkedIn</button></a>
+                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button></a>
             </div>
             <span style="margin-top: 10px;">Resume -</span>
             <div class="contact-methods">
+
                 <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
                 <span style="border-right:2px solid grey ; height: 50px;"> </span>
-                <button class="contact-button"><img src="image/download.png" alt="" srcset="">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;"></button>
-            </div>
+                <button class="contact-button"><img src="image/download.png" alt="" srcset="" id="downloadPdf">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;" id="viewPdf"></button> </div>
         </div>
 
         <div class="contact-right">
@@ -121,9 +122,9 @@
                     Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
                 </p>
                 <p>Join Our Community
-                    <img src="image/WhatsApp.png" alt="" srcset="">
-                    <img src="image/LinkedIn.png" alt="" srcset="">
-                    <img src="image/behance.png" alt="" srcset="">
+                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
                 </p>
                 <span>All Rights Reserved by the user Ui.Guru</span>
             </div>
@@ -135,6 +136,14 @@
             const navUl = document.querySelector('nav ul');
             navUl.classList.toggle('show');
         }
+
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            window.location.href = 'image/Harshal Pandurang Bhargude (UI UX Resume)..pdf';
+        });
+
+        document.getElementById('viewPdf').addEventListener('click', function() {
+            window.open('image/Harshal Pandurang Bhargude (UI UX Resume)..pdf', '_blank');
+        });
     </script>
 </body>
 
