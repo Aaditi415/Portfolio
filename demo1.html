@@ -3,129 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Scroll Testimonials</title>
+    <title>Document</title>
     <style>
-        .testimonials-section {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .testimonials-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-        
-        .testimonial {
-            flex: 1;
-            padding: 10px;
-        }
-        
-        .testimonial-image img {
+        .bookmarkBtn {
             width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        
-        .left,
-        .right {
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.349);
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            transition-duration: 0.3s;
+            overflow: hidden;
         }
         
-        .rev_img {
-            width: 50px;
-            height: 50px;
+        .IconContainer {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(to bottom, #333, #000);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 2;
+            transition-duration: 0.3s;
         }
         
-        .myspan {
-            display: block;
+        .icon {
+            border-radius: 1px;
+        }
+        
+        .text {
+            height: 100%;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            z-index: 1;
+            transition-duration: 0.3s;
+            font-size: 1.04em;
+        }
+        
+        .bookmarkBtn:hover .IconContainer {
+            width: 90px;
+            transition-duration: 0.3s;
+        }
+        
+        .bookmarkBtn:hover .text {
+            transform: translate(10px);
+            width: 0;
+            font-size: 0;
+            transition-duration: 0.3s;
+        }
+        
+        .bookmarkBtn:active {
+            transform: scale(0.95);
+            transition-duration: 0.3s;
         }
     </style>
 </head>
 
 <body>
-    <div class="testimonials-section">
-        <h2>Testimonials</h2>
-        <p>What Our Client Says</p>
-        <div class="testimonials-container">
-            <div class="testimonial">
-                <div class="testimonial-image">
-                    <img src="Image/r1.png" alt="Om Jadhav" id="image1">
-                </div>
-                <h3 id="name1">Om Jadhav</h3>
-                <span class="myspan" id="address1">Satara, Shirwal 412803</span>
-            </div>
-            <img src="image/left.png" alt="Previous" style="height: 400px;" class="left" onclick="previousTestimonial()">
-            <div class="testimonial onlyme">
-                <div class="testimonial-image">
-                    <img src="Image/r2.png" alt="Aniket Jadhav" id="image">
-                </div>
-                <h3 id="name" style="margin-bottom: 5px;">Aniket Jadhav</h3>
-                <span class="myspan" id="address" style="margin-left: 50px;">Katraj, Pune 412502</span>
-                <img src="image/review.png" alt="Review" class="rev_img">
-                <p id="text">"Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."</p>
-            </div>
-            <img src="image/right.png" alt="Next" style="height: 400px;" class="right" onclick="nextTestimonial()">
-            <div class="testimonial">
-                <div class="testimonial-image">
-                    <img src="Image/r3.png" alt="Rohit Jadhav" id="image2">
-                </div>
-                <h3 id="name2">Rohit Jadhav</h3>
-                <span class="myspan" id="address2">Pune 412502</span>
-            </div>
-        </div>
-    </div>
-    <script>
-        let currentIndex = 0;
+    <button class="bookmarkBtn">
+        <span class="IconContainer">
+         <img src="image/whatsapp1.png" alt="" srcset="">
+        </span>
+        <p class="text">Save</p>
+      </button>
 
-        const testimonials = [{
-            image: "Image/r1.png",
-            name: "Om Jadhav",
-            address: "Satara, Shirwal 412803",
-            text: "The user experience overhaul by Harshal Bhargude has been game-changer for our platform. They understood our needs and delivered a product that exceeded our expectation. Their experties in UI/UX design is evident in every detail. Highly recommanded!"
-        }, {
-            image: "Image/r2.png",
-            name: "Aniket Jadhav",
-            address: "Katraj, Pune 412502",
-            text: "Working with Harshal Bhargude was a pleasure. Their detailed eye and understanding of our vision transformed our project. The interface is beautiful and intuitive. Highly recommend for UI/UX design needs."
-        }, {
-            image: "Image/r3.png",
-            name: "Rohit Jadhav",
-            address: "Pune 412502",
-            text: "We were blown away by Harshal Bhargude creativity and professionalism. the new design has significantly improve user engagement and satisfiction. Their innovative soultions and collaborative approach made the entire process seamless."
-        }];
 
-        function updateTestimonials(index) {
-            document.getElementById("image1").src = testimonials[(index + 2) % 3].image;
-            document.getElementById("name1").textContent = testimonials[(index + 2) % 3].name;
-            document.getElementById("address1").textContent = testimonials[(index + 2) % 3].address;
-
-            document.getElementById("image").src = testimonials[index].image;
-            document.getElementById("name").textContent = testimonials[index].name;
-            document.getElementById("address").textContent = testimonials[index].address;
-            document.getElementById("text").textContent = testimonials[index].text;
-
-            document.getElementById("image2").src = testimonials[(index + 1) % 3].image;
-            document.getElementById("name2").textContent = testimonials[(index + 1) % 3].name;
-            document.getElementById("address2").textContent = testimonials[(index + 1) % 3].address;
-        }
-
-        function nextTestimonial() {
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            updateTestimonials(currentIndex);
-        }
-
-        function previousTestimonial() {
-            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-            updateTestimonials(currentIndex);
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            updateTestimonials(currentIndex);
-        });
-    </script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@
         }
         
         .bredcrumb h1 {
-            font-size: 72px;
+            font-size: 195px;
             font-family: "Playfair Display", serif;
         }
         
@@ -70,12 +70,12 @@
                 <li><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Let’s Connect</a> </button>
+            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Get In Touch</a> </button>
         </nav>
     </div>
     <div class="bredcrumb">
         <h1>Ab<span style="color: #F4B000;">out</span> Me</h1>
-        <img src="image/about-line.png" alt="">
+        <img src="image/work.png" alt="">
     </div>
     <div class="main">
         <div class="main-two main-two1">
@@ -388,13 +388,13 @@
 
             <div class="contact-right">
                 <form class="contact-form">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name" id="name">
                     <div style="display:flex; justify-content: space-between;">
-                        <input type="tel" name="phone" placeholder="Phone" style="width:48%;">
-                        <input type="email" name="email" placeholder="Email" style="width:48%;">
+                        <input type="tel" name="phone" placeholder="Phone" style="width:48%;" id="phone">
+                        <input type="email" name="email" placeholder="Email" style="width:48%;" id="email">
                     </div>
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button type="submit">Send a Message</button>
+                    <textarea name="message" placeholder="Message" id="message"></textarea>
+                    <button type="button" onclick="sendMessage()">Send a Message</button>
                 </form>
             </div>
         </div>
@@ -450,11 +450,11 @@
             });
 
             document.getElementById('downloadPdf').addEventListener('click', function() {
-                window.location.href = 'image/Harshal Pandurang Bhargude (UI UX Resume)..pdf';
+                window.location.href = 'image/resume.pdf';
             });
 
             document.getElementById('viewPdf').addEventListener('click', function() {
-                window.open('image/Harshal Pandurang Bhargude (UI UX Resume)..pdf', '_blank');
+                window.open('image/resume.pdf', '_blank');
             });
             let currentIndex = 0;
 
@@ -503,6 +503,18 @@
             document.addEventListener('DOMContentLoaded', (event) => {
                 updateTestimonials(currentIndex);
             });
+
+            function sendMessage() {
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                const whatsappMessage = `Name: ${name}%0aPhone: ${phone}%0aEmail: ${email}%0aMessage: ${message}`;
+                const whatsappURL = `https://api.whatsapp.com/send?phone=919923123066&text=${whatsappMessage}`;
+
+                window.open(whatsappURL, '_blank');
+            }
         </script>
 
 </body>

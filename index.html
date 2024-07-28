@@ -19,7 +19,7 @@
                 <li><a href="contact.html"> Contact Us </a> </li>
             </ul>
             <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Let’s Connect</a> </button>
+            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Gt In Touch</a> </button>
         </nav>
     </div>
     <div class="main">
@@ -114,54 +114,55 @@
         </div>
 
     </div>
-    <div class="case-studies">
-        <div class="case-study">
-            <div class="number">01</div>
+
+    <div class="case-studies ">
+        <div class="case-study ">
+            <div class="number ">01</div>
             <br>
             <h2>VA Reno (Mobile App) Case Study</h2>
-            <div class="category" style="margin-top: 25px;">Mobile App Design</div>
-            <img src="Image/image1.png" alt="VA Reno">
-            <button class="view-project">View project</button>
+            <div class="category " style="margin-top: 25px; ">Mobile App Design</div>
+            <img src="Image/image1.png " alt="VA Reno ">
+            <a href="https://www.behance.net/gallery/183818053/VA-RENO-Mobile-APP-(ARVR-Industry-safety-training)"><button class="view-project ">View project</button></a>
         </div>
-        <div class="case-study">
-            <div class="number">02</div>
+        <div class="case-study ">
+            <div class="number ">02</div>
             <br>
             <h2>Acting & Modeling Job Portal (Mobile App & Website) Case Study</h2>
-            <div class="category">Mobile App & Website Design</div>
-            <img src="Image/image2.png" alt="Acting & Modeling Job Portal">
-            <button class="view-project">View project</button>
+            <div class="category ">Mobile App & Website Design</div>
+            <img src="Image/image2.png " alt="Acting & Modeling Job Portal ">
+            <a href="https://www.behance.net/gallery/185853325/Acting-and-Modeling-Job-Portal-Home-Page"><button class="view-project ">View project</button></a>
         </div>
-        <div class="case-study">
-            <div class="number">03</div>
+        <div class="case-study ">
+            <div class="number ">03</div>
             <br>
             <h2>Eco-Cleaning (Mobile App & Website) Case Study</h2>
-            <div class="category">Mobile App & Website Design</div>
-            <img src="Image/image3.png" alt="Eco-Cleaning">
-            <button class="view-project">View project</button>
+            <div class="category ">Mobile App & Website Design</div>
+            <img src="Image/image3.png " alt="Eco-Cleaning ">
+            <a href="https://www.behance.net/gallery/188688433/Home-Cleaning-Website-Mobile-Responsive-Case-Study"><button class="view-project ">View project</button></a>
         </div>
-        <div class="case-study">
-            <div class="number">04</div>
+        <div class="case-study ">
+            <div class="number ">04</div>
             <br>
             <h2>Traveling Website Design</h2>
-            <div class="category">Website Design</div>
-            <img src="Image/image4.png" alt="VA Reno">
-            <button class="view-project">View project</button>
+            <div class="category ">Website Design</div>
+            <img src="Image/image4.png " alt="VA Reno ">
+            <a href="https://www.behance.net/gallery/194237755/Padoo-Travling-Website-Landing-Page"><button class="view-project ">View project</button></a>
         </div>
-        <div class="case-study">
-            <div class="number">05</div>
+        <div class="case-study ">
+            <div class="number ">05</div>
             <br>
             <h2>E-Learning Website</h2>
-            <div class="category">Website Design </div>
-            <img src="Image/image5.png" alt="VA Reno">
-            <button class="view-project">View project</button>
+            <div class="category ">Website Design </div>
+            <img src="Image/image5.png " alt="VA Reno ">
+            <button class="view-project ">View project</button>
         </div>
-        <div class="case-study">
-            <div class="number">06</div>
+        <div class="case-study ">
+            <div class="number ">06</div>
             <br>
             <h2>Online Learning Platform</h2>
-            <div class="category">Mobile App Design</div>
-            <img src="Image/image6.png" alt="VA Reno">
-            <button class="view-project">View project</button>
+            <div class="category ">Mobile App Design</div>
+            <img src="Image/image6.png " alt="VA Reno ">
+            <button class="view-project ">View project</button>
         </div>
     </div>
     <div class="design-div">
@@ -431,13 +432,13 @@
 
         <div class="contact-right">
             <form class="contact-form">
-                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="name" placeholder="Name" id="name">
                 <div style="display:flex; justify-content: space-between;">
-                    <input type="tel" name="phone" placeholder="Phone" style="width:48%;">
-                    <input type="email" name="email" placeholder="Email" style="width:48%;">
+                    <input type="tel" name="phone" placeholder="Phone" style="width:48%;" id="phone">
+                    <input type="email" name="email" placeholder="Email" style="width:48%;" id="email">
                 </div>
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Send a Message</button>
+                <textarea name="message" placeholder="Message" id="message"></textarea>
+                <button type="button" onclick="sendMessage()">Send a Message</button>
             </form>
         </div>
     </div>
@@ -492,11 +493,11 @@
             });
         });
         document.getElementById('downloadPdf').addEventListener('click', function() {
-            window.location.href = 'image/Harshal Pandurang Bhargude (UI UX Resume)..pdf';
+            window.location.href = 'image/resume.pdf';
         });
 
         document.getElementById('viewPdf').addEventListener('click', function() {
-            window.open('image/Harshal Pandurang Bhargude (UI UX Resume)..pdf', '_blank');
+            window.open('image/resume.pdf', '_blank');
         });
 
         let currentIndex = 0;
@@ -546,6 +547,18 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             updateTestimonials(currentIndex);
         });
+
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappMessage = `Name: ${name}%0aPhone: ${phone}%0aEmail: ${email}%0aMessage: ${message}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=919923123066&text=${whatsappMessage}`;
+
+            window.open(whatsappURL, '_blank');
+        }
     </script>
 </body>
 
