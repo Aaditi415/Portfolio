@@ -11,6 +11,44 @@ body {
     background-color: #F9F4F0;
 }
 
+#loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    }
+}
+
 .nav {
     padding: 10px 50px;
 }
@@ -1475,4 +1513,49 @@ ul li {
     to {
         transform: rotate(360deg);
     }
+}
+
+.Btn {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    border-radius: 25px;
+}
+
+.Btn::before {
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: #F9F4F0;
+    border: none;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%, -50%);
+    border-radius: 0;
+}
+
+.Btn:active {
+    transform: translate(5px, 5px);
+    transition-duration: .3s;
 }

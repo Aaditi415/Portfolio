@@ -49,87 +49,92 @@
 </head>
 
 <body>
-    <div class="nav">
-        <nav>
-            <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a> </li>
-                <li><a href="work.html"> Work</a></li>
-                <li class="active"><a href="contact.html"> Contact Us </a> </li>
-            </ul>
-            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Get In Touch</a> </button>
-        </nav>
+    <div id="loader-container">
+        <div class="loader"></div>
     </div>
-    <div class="contact-div">
-        <div class="contact-left">
-            <div class="header-container">
-                <div class="line"></div>
-                <div class="header-text">Let’s Get in touch</div>
-            </div>
-            <h2>Let’s Get in <br> touch</h2>
-            <p>
-                Have a question, feedback, or interested in collaborating? We'd love to hear from you!
-            </p>
-            <span>Get in touch -</span>
-            <div class="contact-methods">
-
-                <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi" style="text-decoration: none;"><button class="contact-button"><img src="image/whatsapp1.png" alt="" srcset=""> WhatsApp</button></a>
-                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/LinkedIn1.png" alt="" srcset="">LinkedIn</button></a>
-                <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button></a>
-            </div>
-            <span style="margin-top: 10px;">Resume -</span>
-            <div class="contact-methods">
-
-                <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
-                <span style="border-right:2px solid grey ; height: 50px;"> </span>
-                <button class="contact-button"><img src="image/download.png" alt="" srcset="" id="downloadPdf">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;" id="viewPdf"></button> </div>
+    <div id="content" style="display: none;">
+        <div class="nav">
+            <nav>
+                <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a> </li>
+                    <li><a href="work.html"> Work</a></li>
+                    <li class="active"><a href="contact.html"> Contact Us </a> </li>
+                </ul>
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Get In Touch</a> </button>
+            </nav>
         </div>
-
-        <div class="contact-right">
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Name" id="name">
-                <div style="display:flex; justify-content: space-between;">
-                    <input type="tel" name="phone" placeholder="Phone" style="width:48%;" id="phone">
-                    <input type="email" name="email" placeholder="Email" style="width:48%;" id="email">
+        <div class="contact-div">
+            <div class="contact-left">
+                <div class="header-container">
+                    <div class="line"></div>
+                    <div class="header-text">Let’s Get in touch</div>
                 </div>
-                <textarea name="message" placeholder="Message" id="message"></textarea>
-                <button type="button" onclick="sendMessage()">Send a Message</button>
-            </form>
-        </div>
-    </div>
-
-
-    <div style="display: flex; margin: 100px 0;" class="contact-section1">
-        <p class="left">
-            Have more queries? <br> fill the form or pick up
-        </p>
-        <img src="image/Contact us.png" alt="" class="contact_img">
-        <p class="right">Have something to tell us? No matter what the reason is, <br> the phone and call us. we would love to address your <br> queries and collaborate with you.</p>
-    </div>
-    <div class="footer-div">
-        <div class="footer">
-            <img src="image/footer-logo.png" alt="" srcset="" class="first">
-            <ul class="second">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a> </li>
-                <li><a href="work.html"> Work</a></li>
-                <li><a href="contact.html"> Contact Us </a> </li>
-            </ul>
-            <div class="third">
+                <h2>Let’s Get in <br> touch</h2>
                 <p>
-                    Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
+                    Have a question, feedback, or interested in collaborating? We'd love to hear from you!
                 </p>
-                <p>Join Our Community
-                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
-                    <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
-                    <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
-                </p>
-                <span>All Rights Reserved by the user Ui.Guru</span>
+                <span>Get in touch -</span>
+                <div class="contact-methods">
+
+                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi" style="text-decoration: none;"><button class="contact-button"><img src="image/whatsapp1.png" alt="" srcset=""> WhatsApp</button></a>
+                    <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/LinkedIn1.png" alt="" srcset="">LinkedIn</button></a>
+                    <a href="https://www.behance.net/harshalbhargude" style="text-decoration: none;"><button class="contact-button"><img src="image/behance-02.png" alt="" srcset="">Behance</button></a>
+                </div>
+                <span style="margin-top: 10px;">Resume -</span>
+                <div class="contact-methods">
+
+                    <button class="contact-button"><img src="image/resume.png" alt="" srcset=""> Harshal Bhargude Resume</button>
+                    <span style="border-right:2px solid grey ; height: 50px;"> </span>
+                    <button class="contact-button"><img src="image/download.png" alt="" srcset="" id="downloadPdf">| <img src="image/eye.png" alt="" srcset=""  style="margin-left: 10px;padding-top: 3px;" id="viewPdf"></button> </div>
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Name" id="name">
+                    <div style="display:flex; justify-content: space-between;">
+                        <input type="tel" name="phone" placeholder="Phone" style="width:48%;" id="phone">
+                        <input type="email" name="email" placeholder="Email" style="width:48%;" id="email">
+                    </div>
+                    <textarea name="message" placeholder="Message" id="message"></textarea>
+                    <button type="button" onclick="sendMessage()">Send a Message</button>
+                </form>
             </div>
         </div>
 
+
+        <div style="display: flex; margin: 100px 0;" class="contact-section1">
+            <p class="left">
+                Have more queries? <br> fill the form or pick up
+            </p>
+            <img src="image/Contact us.png" alt="" class="contact_img">
+            <p class="right">Have something to tell us? No matter what the reason is, <br> the phone and call us. we would love to address your <br> queries and collaborate with you.</p>
+        </div>
+        <div class="footer-div">
+            <div class="footer">
+                <img src="image/footer-logo.png" alt="" srcset="" class="first">
+                <ul class="second">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a> </li>
+                    <li><a href="work.html"> Work</a></li>
+                    <li><a href="contact.html"> Contact Us </a> </li>
+                </ul>
+                <div class="third">
+                    <p>
+                        Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
+                    </p>
+                    <p>Join Our Community
+                        <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
+                        <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
+                        <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
+                    </p>
+                    <span>All Rights Reserved by the user Ui.Guru</span>
+                </div>
+            </div>
+
+        </div>
     </div>
     <script>
         function toggleMenu() {
@@ -156,6 +161,15 @@
 
             window.open(whatsappURL, '_blank');
         }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide the loader
+            var loader = document.getElementById("loader-container");
+            loader.style.display = "none";
+
+            // Show the main content
+            var content = document.getElementById("content");
+            content.style.display = "block";
+        });
     </script>
 </body>
 
