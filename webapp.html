@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div id="content" style="display: none;">
+        <div class="nav">
+            <nav>
+                <a href="index.html"><img src="Image/logo.png" alt="Logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a> </li>
+                    <li><a href="work.html"> Work</a></li>
+                    <li><a href="contact.html"> Contact Me </a> </li>
+                </ul>
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <button><a href="tel:+917028517362" style="color: #333;text-decoration:none;">Get In Touch</a> </button>
+            </nav>
+        </div>
+        <div class="imp-slider">
+            <img src="Image/Work/slider3.png" alt="" srcset="" class="imp1">
+            <img src="Image/Work/slider3.png" alt="" srcset="" class="imp2">
+
+            <img src="Image/Work/bg3.png" alt="" srcset="" class="imp3">
+        </div>
+        <div class="welcome-card">
+            <div class="logo-container">
+                <img src="Image/Work/website/web1.png" alt="TP Management Logo">
+            </div>
+            <h1 class="card-h1">Welcome to TP Management</h1>
+            <p class="card-p">
+                Powerful & easy platform to manage your tasks and projects, <br> and you also track your project and task deadlines and make best communication in your team.
+            </p>
+            <a href="#" class="view-project-btn">View Project</a>
+        </div>
+        <div class="card w-card w-card1">
+            <img src="Image/Work/website/w1.png" alt="" class="card-img1">
+            <div>
+                <h4>About Project -</h4>
+
+                <img src="Image/Work/img.png" alt="" srcset="" style="float: right;">
+                <p>
+                    The Online Learning Platform is a mobile app offering accessible, engaging education for all ages. It features a wide range of courses with interactive lessons, AI-powered personalized learning paths, live classes, and community forums. Users can learn
+                    offline and instructors can create and manage courses. With 24/7 support, the platform aims to democratize education, providing high-quality learning anytime, anywhere.
+                </p>
+                <button class="card-btn">View Project</button>
+            </div>
+        </div>
+
+        <div class="card w-card">
+            <img src="Image/Work/website/w2.png" alt="" class="card-img">
+            <div>
+                <h4>About Project -</h4>
+
+                <img src="Image/Work/img.png" alt="" srcset="" style="float: right;">
+                <p>
+                    The Blood Donation mobile app is designed to streamline and enhance the blood donation process. It allows users to easily register as donors, find nearby donation centers, and schedule appointments. The app provides reminders for upcoming donations and
+                    tracks donation history. Users can also access educational resources about blood donation and its impact. Additionally, the app connects donors with urgent blood requests and facilitates community building through events and campaigns,
+                    making the donation process more efficient and accessible.
+                </p>
+                <button class="card-btn">View Project</button>
+            </div>
+        </div>
+
+        <div class="card w-card" style="margin-bottom: -300px;">
+            <img src="Image/Work/website/w3.png" alt="" class="card-img">
+            <div>
+                <h4>About Project -</h4>
+
+                <img src="Image/Work/img.png" alt="" srcset="" style="float: right;">
+                <p>
+                    The Document Management Dashboard web app is designed to streamline the organization, storage, and retrieval of digital documents. It offers features like document upload, categorization, and version control, allowing users to efficiently manage and track
+                    changes. The app provides secure access controls, enabling team collaboration while protecting sensitive information. Users can quickly search for and retrieve documents using advanced search functionalities and view real-time updates
+                    on document status. The dashboard also includes analytics and reporting tools to monitor document usage and workflow efficiency, making document management more organized and accessible.
+                </p>
+                <button class="card-btn">View Project</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-div ">
+        <div class="footer">
+            <img src="image/footer-logo.png" alt="" srcset="" class="first">
+            <ul class="second">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a> </li>
+                <li><a href="work.html"> Work</a></li>
+                <li><a href="contact.html"> Contact Me </a> </li>
+            </ul>
+            <div class="third">
+                <p>
+                    Behind the every sweet memories, there is a “Ui.Guru” with a skilled hand and a passion for the design.
+                </p>
+                <p>Join Our Community
+                    <a href="https://api.whatsapp.com/send?phone=917028517362&text=Hi"><img src="image/WhatsApp.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/LinkedIn.png" alt="" srcset=""></a>
+                    <a href="https://www.behance.net/harshalbhargude"><img src="image/behance.png" alt="" srcset=""></a>
+                </p>
+                <span>All Rights Reserved by the user Ui.Guru</span>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide the loader
+            var loader = document.getElementById("loader-container");
+            loader.style.display = "none";
+
+            // Show the main content
+            var content = document.getElementById("content");
+            content.style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
